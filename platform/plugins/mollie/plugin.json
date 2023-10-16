@@ -1,0 +1,10 @@
+{
+    "name": "Mollie Payment Gateway",
+    "namespace": "Botble\\Mollie\\",
+    "provider": "Botble\\Mollie\\Providers\\MollieServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "1.0",
+    "description": "Mollie payment gateway integration",
+    "require": ["payment"]
+}

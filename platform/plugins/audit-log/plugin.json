@@ -1,0 +1,9 @@
+{
+    "name": "Audit Log",
+    "namespace": "Botble\\AuditLog\\",
+    "provider": "Botble\\AuditLog\\Providers\\AuditLogServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "5.8",
+    "description": "Record activities logs"
+}

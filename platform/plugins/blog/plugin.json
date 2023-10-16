@@ -1,0 +1,9 @@
+{
+    "name": "Blog",
+    "namespace": "Botble\\Blog\\",
+    "provider": "Botble\\Blog\\Providers\\BlogServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "5.8",
+    "description": "Manage posts, categories, tags"
+}

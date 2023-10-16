@@ -1,0 +1,9 @@
+{
+  "name": "FAQ",
+  "namespace": "Botble\\Faq\\",
+  "provider": "Botble\\Faq\\Providers\\FaqServiceProvider",
+  "author": "Lienketso",
+  "url": "https://lienketso.vn",
+  "version": "5.8",
+  "description": "Frequently Asked Question(s) FAQ"
+}

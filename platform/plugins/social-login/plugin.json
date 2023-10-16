@@ -1,0 +1,9 @@
+{
+    "name": "Social Login",
+    "namespace": "Botble\\SocialLogin\\",
+    "provider": "Botble\\SocialLogin\\Providers\\SocialLoginServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "5.8",
+    "description": "Easier and faster login with Facebook, LinkedIn, Github or Google."
+}

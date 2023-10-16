@@ -1,0 +1,9 @@
+{
+  "name": "Captcha",
+  "namespace": "Botble\\Captcha\\",
+  "provider": "Botble\\Captcha\\Providers\\CaptchaServiceProvider",
+  "author": "Lienketso",
+  "url": "https://lienketso.vn",
+  "version": "5.8",
+  "description": "Captcha for higher security"
+}

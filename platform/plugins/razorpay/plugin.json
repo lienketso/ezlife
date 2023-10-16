@@ -1,0 +1,10 @@
+{
+    "name": "Razorpay Payment Gateway",
+    "namespace": "Botble\\Razorpay\\",
+    "provider": "Botble\\Razorpay\\Providers\\RazorpayServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "1.0",
+    "description": "Razorpay payment gateway integration",
+    "require": ["payment"]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Language Advanced",
+    "namespace": "Botble\\LanguageAdvanced\\",
+    "provider": "Botble\\LanguageAdvanced\\Providers\\LanguageAdvancedServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "1.1",
+    "description": "Advanced Multi-language",
+    "require": ["language"]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Nest",
+    "namespace": "Theme\\Nest\\",
+    "description": "Nest - Multivendor Organic & Grocery Laravel eCommerce",
+    "author": "Lienketso",
+    "version": "1.3.3",
+    "required_plugins": []
+}

@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admincp/
+Disallow: /customer/
+Disallow: /ubgxu/
+Disallow: /collaborator/
+Disallow: /cart/
+Disallow: /wishlist/
+Disallow: /compare/
+Disallow: /checkout/
+Sitemap: https://ezlife.vn/sitemap.xml

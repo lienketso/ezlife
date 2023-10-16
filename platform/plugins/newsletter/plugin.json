@@ -1,0 +1,9 @@
+{
+    "name": "Newsletter",
+    "namespace": "Botble\\Newsletter\\",
+    "provider": "Botble\\Newsletter\\Providers\\NewsletterServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "5.8",
+    "description": "Newsletter"
+}

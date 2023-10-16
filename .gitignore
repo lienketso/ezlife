@@ -1,0 +1,12 @@
+/.idea
+/database/seeders
+/public/storage
+/vendor
+database.sql
+/node_modules
+package-lock.json
+.env
+storage/cache_keys.json
+.env.example
+.env.txt
+composer.lock

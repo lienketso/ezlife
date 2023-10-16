@@ -1,0 +1,9 @@
+{
+    "name": "Payment",
+    "namespace": "Botble\\Payment\\",
+    "provider": "Botble\\Payment\\Providers\\PaymentServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "1.1",
+    "description": "Payment plugin"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Stock Manager",
+    "namespace": "Botble\\Stock\\",
+    "provider": "Botble\\Stock\\Providers\\StockServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "5.8",
+    "description": "Manage stock, categories, contract"
+}

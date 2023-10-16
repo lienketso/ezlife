@@ -1,0 +1,9 @@
+{
+    "name": "Marketplace",
+    "namespace": "Botble\\Marketplace\\",
+    "provider": "Botble\\Marketplace\\Providers\\MarketplaceServiceProvider",
+    "author": "Lienketso",
+    "url": "https://lienketso.vn",
+    "version": "1.0.0",
+    "description": "Marketplace plugin for Ecommerce site"
+}

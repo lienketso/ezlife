@@ -1,0 +1,43 @@
+.empty-list {
+	padding: 150px 0;
+	img {
+		max-width: 150px;
+	}
+	h1 {
+		margin-top: 40px;
+		font-size: 20px;
+	}
+}
+
+.contract-item-wrapper {
+	padding: 15px;
+	border-radius: 10px;
+	border: 1px solid #eee;
+	background-color: #fff;
+	.package-info {
+		padding: 10px;
+		background-color: #f4f4f4;
+		margin-bottom: 15px;
+		.package-info-title {
+			font-weight: 700;
+		}
+	}
+	.contract-info {
+		padding: 10px;
+		background: #d7f1e5;
+		.contract-info-title {
+			font-weight: 700;
+		}
+	}
+	.contract-detail {
+		margin-top: 15px;
+		a {
+			display: block;
+			text-align: center;
+			color: #fff;
+			background-color: #0a53be;
+			padding: 10px;
+			border-radius: 15px;
+		}
+	}
+}
