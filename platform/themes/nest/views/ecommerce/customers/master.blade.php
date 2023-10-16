@@ -32,25 +32,25 @@
             'label' => __('Change password'),
             'icon'  => 'fi-rs-key'
         ],
-        [
-            'key'   => 'customer.payment-code',
-            'label' => 'Mã thanh toán',
-            'icon'  => 'fi-rs-lock'
-        ],
-        [
-            'key'   => 'ubgxu.dashboard',
-            'label' => 'Quản lý điểm',
-            'icon'  => 'fi-rs-money'
-        ],
+//        [
+//            'key'   => 'customer.payment-code',
+//            'label' => 'Mã thanh toán',
+//            'icon'  => 'fi-rs-lock'
+//        ],
+//        [
+//            'key'   => 'ubgxu.dashboard',
+//            'label' => 'Quản lý điểm',
+//            'icon'  => 'fi-rs-money'
+//        ],
 
     ];
 
     if (is_plugin_active('stock') && EcommerceHelper::isAffiliater()) {
-        $menus[] = [
-            'key'   => 'stock-manager.dashboard',
-            'label' => 'Quản lý cổ phần',
-            'icon'  => 'fi-rs-money'
-        ];
+//        $menus[] = [
+//            'key'   => 'stock-manager.dashboard',
+//            'label' => 'Quản lý cổ phần',
+//            'icon'  => 'fi-rs-money'
+//        ];
     }
 
 @endphp
@@ -156,37 +156,38 @@
                                     </li>
                                 @endforeach
 
-                                @if (auth('customer')->user()->is_affiliater)
-                                    <li class="nav-item">
-                                        <a class="nav-link @if (Route::currentRouteName() == 'collaborator.dashboard') active @endif" href="{{ route('collaborator.dashboard') }}" href="{{ route('collaborator.become-collaborator') }}">
-                                            <i class="fi-rs-users mr-10"></i> Trang nhân viên
-                                        </a>
-                                    </li>
-                                @else
-                                    <li class="nav-item">
-                                        <a class="nav-link @if (Route::currentRouteName() == 'collaborator.become-collaborator') active @endif" href="{{ route('collaborator.become-collaborator') }}">
-                                            <i class="fi-rs-users mr-10"></i> Đăng ký ứng tuyển nhân viên
-                                        </a>
-                                    </li>
-                                @endif
+{{--                                @if (auth('customer')->user()->is_affiliater)--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link @if (Route::currentRouteName() == 'collaborator.dashboard') active @endif" href="{{ route('collaborator.dashboard') }}" href="{{ route('collaborator.become-collaborator') }}">--}}
+{{--                                            <i class="fi-rs-users mr-10"></i> Trang nhân viên--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                @else--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link @if (Route::currentRouteName() == 'collaborator.become-collaborator') active @endif" href="{{ route('collaborator.become-collaborator') }}">--}}
+{{--                                            <i class="fi-rs-users mr-10"></i> Đăng ký ứng tuyển nhân viên--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                @endif--}}
 
-                                @if (is_plugin_active('marketplace'))
-                                    @if (auth('customer')->user()->is_vendor)
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('marketplace.vendor.dashboard') }}">
-                                                <i class="fi-rs-shopping-cart mr-10"></i> {{ __('Vendor dashboard') }}
-                                            </a>
-                                        </li>
-                                    @else
-                                            @if (auth('customer')->user()->is_affiliater)
-                                        <li class="nav-item @if (Route::currentRouteName() == 'marketplace.vendor.become-vendor') active @endif">
-                                            <a class="nav-link" href="{{ route('marketplace.vendor.become-vendor') }}">
-                                                <i class="fi-rs-shopping-cart mr-10"></i> {{ __('Become a vendor') }}
-                                            </a>
-                                        </li>
-                                            @endif
-                                    @endif
-                                @endif
+{{--                                @if (is_plugin_active('marketplace'))--}}
+{{--                                    @if (auth('customer')->user()->is_vendor)--}}
+{{--                                        <li class="nav-item">--}}
+{{--                                            <a class="nav-link" href="{{ route('marketplace.vendor.dashboard') }}">--}}
+{{--                                                <i class="fi-rs-shopping-cart mr-10"></i> {{ __('Vendor dashboard') }}--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                    @else--}}
+{{--                                            @if (auth('customer')->user()->is_affiliater)--}}
+{{--                                        <li class="nav-item @if (Route::currentRouteName() == 'marketplace.vendor.become-vendor') active @endif">--}}
+{{--                                            <a class="nav-link" href="{{ route('marketplace.vendor.become-vendor') }}">--}}
+{{--                                                <i class="fi-rs-shopping-cart mr-10"></i> {{ __('Become a vendor') }}--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                            @endif--}}
+{{--                                    @endif--}}
+{{--                                @endif--}}
+
                                 <li class="nav-item">
                                     <a class="nav-link"
                                        href="{{ route('customer.logout') }}"

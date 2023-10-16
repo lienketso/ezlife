@@ -20,6 +20,7 @@
 
                 <div class="row">
                     <div class="col-12 col-md-6">
+                        @if (EcommerceHelper::isAffiliater())--}}
                         <div class="overview-card">
                             <div class="card card-body mb-4">
                                 <article class="icontext">
@@ -50,7 +51,7 @@
                         </div>
                     </div>
 
-{{--                    @if (EcommerceHelper::isAffiliater())--}}
+
                     <div class="col-12 col-md-6">
                         <div class="overview-card">
                             <div class="card card-body mb-4">
@@ -66,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-{{--                    @endif--}}
+                   @endif
                     @if (EcommerceHelper::isAffiliater())
                     <div class="col-12 col-md-6">
                         <div class="overview-card">
@@ -88,7 +89,7 @@
 
                 <table class="table table-hover table-bordered">
                     <tbody>
-{{--                        @if (EcommerceHelper::isAffiliater())--}}
+                     @if (EcommerceHelper::isAffiliater())
                         <tr>
                             <td>Mã giới thiệu <br/>(Dùng cho việc mở rộng hệ thống bán hàng của bạn)</td>
                             <td><b>{{auth('customer')->user()->affiliation_id}}</b></td>
@@ -104,7 +105,7 @@
                                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{EcommerceHelper::generateAffiliateLink()}}" alt="" class="img-fluid" style="margin: 10px 0; display: block">
                             </td>
                         </tr>
-{{--                        @endif--}}
+                    @endif
                         <tr>
                             <td>Họ và tên</td>
                             <td>{{auth('customer')->user()->name}} <i class="fi-rs-check" style="color: green"></i></td>
