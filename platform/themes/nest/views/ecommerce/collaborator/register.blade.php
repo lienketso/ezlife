@@ -9,16 +9,16 @@
         <div class="ps-form__content">
             <input type="hidden" name="is_affiliater" value="1">
 
-            @if (auth('customer')->user()->presenter_id == null || auth('customer')->user()->presenter_id == 0)
-            <div class="form-group">
-                <label for="affiliation_id">Mã giới thiệu (Tùy chọn)</label>
-                <input class="form-control" name="affiliation_id" id="affiliation_id" type="text"
-                       value="{{ old('affiliation_id') }}" placeholder="Mã của người giới thiệu">
-                @if ($errors->has('affiliation_id'))
-                    <span class="text-danger">{{ $errors->first('affiliation_id') }}</span>
-                @endif
-            </div>
-            @endif
+{{--            @if (auth('customer')->user()->presenter_id == null || auth('customer')->user()->presenter_id == 0)--}}
+{{--            <div class="form-group">--}}
+{{--                <label for="affiliation_id">Mã giới thiệu (Tùy chọn)</label>--}}
+{{--                <input class="form-control" name="affiliation_id" id="affiliation_id" type="text"--}}
+{{--                       value="{{ old('affiliation_id') }}" placeholder="Mã của người giới thiệu">--}}
+{{--                @if ($errors->has('affiliation_id'))--}}
+{{--                    <span class="text-danger">{{ $errors->first('affiliation_id') }}</span>--}}
+{{--                @endif--}}
+{{--            </div>--}}
+{{--            @endif--}}
 
             <div class="row">
                 <div class="col-12 col-lg-6">

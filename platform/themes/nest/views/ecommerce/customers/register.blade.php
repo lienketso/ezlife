@@ -81,14 +81,14 @@
                                             @endif
                                         </div>
 
-                                        <div class="form-group">
-                                            <label for="affiliation_id">Mã giới thiệu:</label>
-                                            <input class="form-control" name="affiliation_id" id="affiliation_id" type="text"
-                                                   value="{{ old('affiliation_id', base64_decode(Request::get('aff_id'))) }}" placeholder="Mã giới thiệu (Tùy chọn)">
-                                            @if ($errors->has('affiliation_id'))
-                                                <span class="text-danger">{{ $errors->first('affiliation_id') }}</span>
-                                            @endif
-                                        </div>
+{{--                                        <div class="form-group">--}}
+{{--                                            <label for="affiliation_id">Mã giới thiệu:</label>--}}
+{{--                                            <input class="form-control" name="affiliation_id" id="affiliation_id" type="text"--}}
+{{--                                                   value="{{ old('affiliation_id', base64_decode(Request::get('aff_id'))) }}" placeholder="Mã giới thiệu (Tùy chọn)">--}}
+{{--                                            @if ($errors->has('affiliation_id'))--}}
+{{--                                                <span class="text-danger">{{ $errors->first('affiliation_id') }}</span>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
 
                                         @if (is_plugin_active('marketplace'))
                                             <div class="show-if-vendor" @if (old('is_vendor') == 0) style="display: none" @endif>
