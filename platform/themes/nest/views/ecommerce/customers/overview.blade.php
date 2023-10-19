@@ -90,21 +90,21 @@
                 <table class="table table-hover table-bordered">
                     <tbody>
                      @if (EcommerceHelper::isAffiliater())
-                        <tr>
-                            <td>Mã giới thiệu <br/>(Dùng cho việc mở rộng hệ thống bán hàng của bạn)</td>
-                            <td><b>{{auth('customer')->user()->affiliation_id}}</b></td>
-                        </tr>
-                        <tr>
-                            <td>Link đăng ký nhanh<br/>(Copy và gửi link, hoặc scan mã QR giới thiệu của bạn)</td>
-                            <td>
-                                <input type="text" value="{{EcommerceHelper::generateAffiliateLink()}}" id="register-link" class="hidden">
-                                <b>
-                                    <a id="copylink-affiliate" href="javascript:;">Link đăng ký</a><br/>
-                                    <small>{{EcommerceHelper::generateAffiliateLink()}}</small>
-                                </b><br/>
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{EcommerceHelper::generateAffiliateLink()}}" alt="" class="img-fluid" style="margin: 10px 0; display: block">
-                            </td>
-                        </tr>
+{{--                        <tr>--}}
+{{--                            <td>Mã giới thiệu <br/>(Dùng cho việc mở rộng hệ thống bán hàng của bạn)</td>--}}
+{{--                            <td><b>{{auth('customer')->user()->affiliation_id}}</b></td>--}}
+{{--                        </tr>--}}
+{{--                        <tr>--}}
+{{--                            <td>Link đăng ký nhanh<br/>(Copy và gửi link, hoặc scan mã QR giới thiệu của bạn)</td>--}}
+{{--                            <td>--}}
+{{--                                <input type="text" value="{{EcommerceHelper::generateAffiliateLink()}}" id="register-link" class="hidden">--}}
+{{--                                <b>--}}
+{{--                                    <a id="copylink-affiliate" href="javascript:;">Link đăng ký</a><br/>--}}
+{{--                                    <small>{{EcommerceHelper::generateAffiliateLink()}}</small>--}}
+{{--                                </b><br/>--}}
+{{--                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{EcommerceHelper::generateAffiliateLink()}}" alt="" class="img-fluid" style="margin: 10px 0; display: block">--}}
+{{--                            </td>--}}
+{{--                        </tr>--}}
                     @endif
                         <tr>
                             <td>Họ và tên</td>

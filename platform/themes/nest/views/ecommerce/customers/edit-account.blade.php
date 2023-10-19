@@ -26,14 +26,14 @@
                         <input type="text" class="form-control square" name="phone" id="phone" disabled="disabled"  placeholder="{{ __('Phone') }}" value="{{ auth('customer')->user()->phone }}">
                         {!! Form::error('name', $errors) !!}
                     </div>
-                    @if (auth('customer')->user()->presenter_id == null || auth('customer')->user()->presenter_id == 0)
-                    <div class="form-group col-md-12 @if ($errors->has('affiliation_id')) has-error @endif">
-                        <label for="phone">Mã giới thiệu:</label>
-                        <input type="text" class="form-control square" name="affiliation_id" id="affiliation_id" placeholder="Nhập mã giới thiệu"
-                               value="{{ old('affiliation_id', base64_decode(Request::get('aff_id'))) }}">
-                        {!! Form::error('affiliation_id', $errors) !!}
-                    </div>
-                    @endif
+{{--                    @if (auth('customer')->user()->presenter_id == null || auth('customer')->user()->presenter_id == 0)--}}
+{{--                    <div class="form-group col-md-12 @if ($errors->has('affiliation_id')) has-error @endif">--}}
+{{--                        <label for="phone">Mã giới thiệu:</label>--}}
+{{--                        <input type="text" class="form-control square" name="affiliation_id" id="affiliation_id" placeholder="Nhập mã giới thiệu"--}}
+{{--                               value="{{ old('affiliation_id', base64_decode(Request::get('aff_id'))) }}">--}}
+{{--                        {!! Form::error('affiliation_id', $errors) !!}--}}
+{{--                    </div>--}}
+{{--                    @endif--}}
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-fill-out submit">{{ __('Update') }}</button>
                     </div>

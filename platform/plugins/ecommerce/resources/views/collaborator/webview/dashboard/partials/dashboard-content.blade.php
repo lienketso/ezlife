@@ -5,10 +5,10 @@
                     <span class="icon icon-sm rounded-circle bg-primary-light">
                         <i class="text-primary material-icons md-qrcode"></i>
                     </span>
-                <div class="text">
-                    <h6 class="mb-1 card-title">Mã giới thiệu</h6>
-                    <span>{{auth('customer')->user()->affiliation_id}}</span>
-                </div>
+{{--                <div class="text">--}}
+{{--                    <h6 class="mb-1 card-title">Mã giới thiệu</h6>--}}
+{{--                    <span>{{auth('customer')->user()->affiliation_id}}</span>--}}
+{{--                </div>--}}
             </article>
         </div>
     </div>
