@@ -634,7 +634,7 @@ class PublicCheckoutController
     public function postCheckout(
         $token,
         CheckoutRequest $request,
-        PayPalPaymentService $payPalService,
+//        PayPalPaymentService $payPalService,
         StripePaymentService $stripePaymentService,
         CodPaymentService $codPaymentService,
         BankTransferPaymentService $bankTransferPaymentService,
@@ -1019,24 +1019,24 @@ class PublicCheckoutController
 
                     break;
 
-                case PaymentMethodEnum::PAYPAL:
-
-                    $supportedCurrencies = $payPalService->supportedCurrencyCodes();
-
-                    if (!in_array($paymentData['currency'], $supportedCurrencies)) {
-                        $paymentData['error'] = true;
-                        $paymentData['message'] = __(":name doesn't support :currency. List of currencies supported by :name: :currencies.", ['name' => 'PayPal', 'currency' => $paymentData['currency'], 'currencies' => implode(', ', $supportedCurrencies)]);
-                        break;
-                    }
-
-                    $checkoutUrl = $payPalService->execute($request);
-                    if ($checkoutUrl) {
-                        return redirect($checkoutUrl);
-                    }
-
-                    $paymentData['error'] = true;
-                    $paymentData['message'] = $payPalService->getErrorMessage();
-                    break;
+//                case PaymentMethodEnum::PAYPAL:
+//
+//                    $supportedCurrencies = $payPalService->supportedCurrencyCodes();
+//
+//                    if (!in_array($paymentData['currency'], $supportedCurrencies)) {
+//                        $paymentData['error'] = true;
+//                        $paymentData['message'] = __(":name doesn't support :currency. List of currencies supported by :name: :currencies.", ['name' => 'PayPal', 'currency' => $paymentData['currency'], 'currencies' => implode(', ', $supportedCurrencies)]);
+//                        break;
+//                    }
+//
+//                    $checkoutUrl = $payPalService->execute($request);
+//                    if ($checkoutUrl) {
+//                        return redirect($checkoutUrl);
+//                    }
+//
+//                    $paymentData['error'] = true;
+//                    $paymentData['message'] = $payPalService->getErrorMessage();
+//                    break;
                 case PaymentMethodEnum::COD:
 
                     $minimumOrderAmount = setting('payment_cod_minimum_amount', 0);

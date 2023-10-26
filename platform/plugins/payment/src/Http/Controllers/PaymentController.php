@@ -69,13 +69,13 @@ class PaymentController extends Controller
      * @param PaymentInterface $paymentRepository
      */
     public function __construct(
-        PayPalPaymentService $payPalService,
+//        PayPalPaymentService $payPalService,
         StripePaymentService $stripePaymentService,
         CodPaymentService $codPaymentService,
         BankTransferPaymentService $bankTransferPaymentService,
         PaymentInterface $paymentRepository
     ) {
-        $this->payPalService = $payPalService;
+//        $this->payPalService = $payPalService;
 
         $this->stripePaymentService = $stripePaymentService;
         $this->paymentRepository = $paymentRepository;
