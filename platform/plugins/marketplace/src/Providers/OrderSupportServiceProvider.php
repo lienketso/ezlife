@@ -481,7 +481,24 @@ class OrderSupportServiceProvider extends ServiceProvider
             $shippingMethod = $shippingFeeService
                 ->execute($shippingData, $request->input("shipping_method.$storeId"),
                     $request->input("shipping_option.$storeId"));
+            $mpSessionCheckoutData = Arr::get($sessionCheckoutData, 'marketplace');
+            $vendorSessionData = Arr::get($mpSessionCheckoutData, $storeId);
+            $shipping = $shippingFeeService->execute($shippingData);
+            $defaultShippingMethod = $request->input("shipping_method.$storeId",
+                old("shipping_method.$storeId",
+                    Arr::get($vendorSessionData, 'shipping_method', Arr::first(array_keys($shipping)))));
 
+            $defaultShippingOption = null;
+            if (!empty($shipping)) {
+                $defaultShippingOption = Arr::first(array_keys(Arr::first($shipping)));
+
+                if ($optionRequest = $request->input("shipping_option.$storeId",
+                    old("shipping_option.$storeId"))) {
+                    $defaultShippingOption = $optionRequest;
+                } else {
+                    $defaultShippingOption = Arr::get($vendorSessionData, 'shipping_option', $defaultShippingOption);
+                }
+            }
             $shippingAmount = Arr::get($shipping, "$defaultShippingMethod.$defaultShippingOption.price", 0);
 
 //            $shippingAmount = Arr::get(Arr::first($shippingMethod), 'bestexpress.price', 0);
