@@ -180,7 +180,9 @@
                                             <i class="fas fa-spinner fa-spin"></i>
                                         </div>
                                     </div>
+
                                     @if (!empty($shipping))
+
                                         <div class="payment-checkout-form">
                                             <input type="hidden" name="shipping_option" value="{{ old('shipping_option', $defaultShippingOption) }}">
                                             <ul class="list-group list_payment_method">

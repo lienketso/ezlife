@@ -482,10 +482,10 @@ class OrderSupportServiceProvider extends ServiceProvider
                 ->execute($shippingData, $request->input("shipping_method.$storeId"),
                     $request->input("shipping_option.$storeId"));
 
-            //$shippingAmount = Arr::get($shipping, "$defaultShippingMethod.$defaultShippingOption.price", 0);
+            $shippingAmount = Arr::get($shipping, "$defaultShippingMethod.$defaultShippingOption.price", 0);
 
 //            $shippingAmount = Arr::get(Arr::first($shippingMethod), 'bestexpress.price', 0);
-            $shippingAmount = Arr::get(Arr::first($shippingMethod), 'haibonbay.price', 0);
+//            $shippingAmount = Arr::get(Arr::first($shippingMethod), 'haibonbay.price', 0);
         }
 
         if ($couponCode) {
@@ -921,11 +921,11 @@ class OrderSupportServiceProvider extends ServiceProvider
                 $shippingData['city'] = $request->get('receiver_province');
                 $shippingData['state'] = $request->get('receiver_district');
             }
-//            $shipping = $shippingFeeService->execute($shippingData);
+            $shipping = $shippingFeeService->execute($shippingData);
 //            $shippingMethod = 'bestexpress';
-            $shippingMethod = 'haibonbay';
+//            $shippingMethod = 'haibonbay';
             // Tính phí ship
-            $shipping = $shippingFeeService->execute($shippingData, $shippingMethod);
+//            $shipping = $shippingFeeService->execute($shippingData, $shippingMethod);
 
             foreach ($shipping as $key => &$shipItem) {
                 if (get_shipping_setting('free_ship', $key)) {
@@ -951,9 +951,9 @@ class OrderSupportServiceProvider extends ServiceProvider
                 }
             }
 
-            //$shippingAmount = Arr::get($shipping, "$defaultShippingMethod.$defaultShippingOption.price", 0);
+            $shippingAmount = Arr::get($shipping, "$defaultShippingMethod.$defaultShippingOption.price", 0);
 //            $shippingAmount = Arr::get($shipping, "bestexpress.bestexpress.price", 0);
-            $shippingAmount = Arr::get($shipping, "haibonbay.haibonbay.price", 0);
+//            $shippingAmount = Arr::get($shipping, "haibonbay.haibonbay.price", 0);
 
             Arr::set($vendorSessionData, 'shipping_method', $defaultShippingMethod);
             Arr::set($vendorSessionData, 'shipping_option', $defaultShippingOption);

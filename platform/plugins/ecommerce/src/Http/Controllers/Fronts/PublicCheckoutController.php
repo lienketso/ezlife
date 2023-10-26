@@ -242,7 +242,8 @@ class PublicCheckoutController
 //            $shipping = $shippingFeeService->execute($shippingData);
 
 //            $shippingMethod = 'bestexpress';
-            $shippingMethod = 'haibonbay';
+            $shippingMethod = 'default';
+//            $shippingMethod = 'haibonbay';
             // Tính phí ship
             $shipping = $shippingFeeService->execute($shippingData, $shippingMethod);
 
