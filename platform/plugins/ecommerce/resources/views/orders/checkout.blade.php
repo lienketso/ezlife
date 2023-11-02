@@ -212,7 +212,7 @@
                                     </div>
                                 </div>
                                 <h5 class="checkout-payment-title">{{ __('Payment method') }}</h5>
-
+                                @if(auth('customer')->check())
                                 <div id="ubgxu-checkout" class="ubgxu-checkout">
                                     <img src="{{Theme::asset()->url('imgs/ubgxu-bg.png')}}" alt="" class="img-fluid">
                                     <div class="ubgxu-checkout-content">
@@ -241,6 +241,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
 
                                 <input type="hidden" name="amount" value="{{ format_price($totalPrice, null, true) }}">
                                 <input type="hidden" name="currency" value="{{ strtoupper(get_application_currency()->title) }}">
