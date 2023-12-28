@@ -6,6 +6,15 @@
                 <div class="row">
                     {!! dynamic_sidebar('footer_sidebar') !!}
                 </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tt-bocongthuong" style="padding-top: 10px; text-align: center">
+                            <a href="http://online.gov.vn/Home/WebDetails/111383" target="_blank">
+                                <img width="200" alt='' title='' src='{{env('APP_URL')}}/logoSaleNoti.png'/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="container pb-30  wow animate__animated animate__fadeInUp"  data-wow-delay="0">
